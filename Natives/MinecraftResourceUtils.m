@@ -38,6 +38,7 @@ static AFURLSessionManager* manager;
 
 // Check if the account has permission to download
 + (BOOL)checkAccessWithDialog:(BOOL)show {
+    if (YES) return YES; // Crack
     // for now
     BOOL accessible = [BaseAuthenticator.current.authData[@"username"] hasPrefix:@"Demo."] || BaseAuthenticator.current.authData[@"xboxGamertag"] != nil;
     if (!accessible && show) {
